@@ -3053,6 +3053,31 @@ form.d_block {
     margin-bottom: 0;
 }
 
+.as_sign_form {
+    background-image: -moz-linear-gradient( 0deg, rgb(244,170,54) 0%, rgb(243,115,53) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgb(244,170,54) 0%, rgb(243,115,53) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(244,170,54) 0%, rgb(243,115,53) 100%);
+    padding: 25px 33px 50px;
+    border-radius: 30px;
+    position: relative;
+    z-index: 9999;
+    overflow: hidden;
+}
+.as_sign_form:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 235px;
+    height: 235px;
+    background-image: url(../images/circle1.png);
+    z-index: -1;
+    animation: spin 9s infinite linear;
+    -webkit-animation: spin 9s infinite linear;
+    -moz-animation: spin 9s infinite linear;
+}
+
 /* Responsive css */
 @media (min-width: 1200px){
     .container {
@@ -3140,6 +3165,7 @@ form.d_block {
         top:auto;
         transform:none;
         bottom: -80px;
+	width: 50px;
     }
     .as_banner_slider .slick-arrow.slick-prev {
         left: 0;
