@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Astrology</title>
+  <title>Kinh Dịch - Tử Vi</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="viewport-fit=cover, user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- stylesheet -->
     <link rel="stylesheet" href="assets/css/bootstrap.css">
@@ -26,53 +27,15 @@
             <div class="as_info_detail">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-12 text-center">
                             <ul>
                                 <li>
                                     <a href="javascript:;">
-                                        <div class="as_infobox">
-                                            <span class="as_infoicon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="17" height="17" viewBox="0 0 17 17" style="&#10;">
-                                                    <image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAkFBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAACWvj/iAAAALnRSTlMAs+Z9A8OHq1DyTbvnW1I94To8yZWCSMyETosK4MVR8Y0V3IYNlLpJ0QVasu2nQJZtCAAAAAFiS0dEAIgFHUgAAAAJcEhZcwAALiMAAC4jAXilP3YAAACASURBVBjTXc7ZEoIwDAXQsKiIooiKG3VBwZX7/59HIFPael+SnpkkJSLPD8hOOAIwtmUC/BEkkZGpSGxk1r3niTW16GTpHEtZVo5kLGtHaMO07btc798x7bkegKPIqWBS5+jC5Sp0KzHkLvRQhvT6SkM9XHy+elBv6xefr/9riFp+ORMcFJRCjQAAAABJRU5ErkJggg==" width="17" height="17"/>
-                                                  </svg>
-                                            </span>
-                                        +1800 326 3264
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div class="as_infobox">
-                                            <span class="as_infoicon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="18" height="13" viewBox="0 0 18 13">
-                                                    <image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAANCAMAAACTkM4rAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAllBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAADAm+O6AAAAMHRSTlMAnPKljr/GhqKttZn1jLe+g/bxiLvDfn07z9cuDFuRD7MXFoq9k66LrKSjlo+U852fXjOJAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAIZJREFUCNdNj0kSgkAQBFMccUNFcFfABRX3+v/rHCB0qENFRx4qsqElrxG1wdBRIz5d1KPvyIChCDRi/CMTQk2JpJhZTeYspAjPnmG957O07VVIK9bShq3+yOwSTEqSxRWyWyl7pYfjSTlxuRXozMU5XBWggpvzKriLh7Mqk/OEl97NHz98AaD8G1UEUcOeAAAAAElFTkSuQmCC" width="18" height="13"/>
-                                                  </svg>
-                                                  
-                                            </span>
-                                        support@website.com
+                                        <div class="as_infobox" id="random_quote">
                                         </div>
                                     </a>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="as_right_info">
-                                <div class="as_search_wrapper">
-                                        <input type="text" name="" class="form-control" id="" placeholder="Search...">
-                                        <a href="#">
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="15" height="15" viewBox="0 0 15 15">
-                                                <image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAMAAAAMCGV4AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAtFBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAADolZgzAAAAOnRSTlMAXdn8970vurJeTXPTdLwqZWdUIn4O6rmFUtE8ot9q0sLE4wRbI7/OcIMXvnVf+rPVcW18wLBrbmiCc40geAAAAAFiS0dEAIgFHUgAAAAJcEhZcwAALiMAAC4jAXilP3YAAACDSURBVAjXVYvXEoJAEAQHcwIxYFYEA0bMaf7/w7zl4KrYh+nqqVkAsApFlsoVpFdlrd5otmhrddhO6LIj6LKX7vr0VA6G2R84khgbdybiU+OzufjCuL9UEYSZrrhWuTGDbZRgx73gcORJ92fGweVK/8a7LrzHM3pZwJsf5O7LX76w4z/cdAviAFLW+gAAAABJRU5ErkJggg==" width="15" height="15"/>
-                                              </svg>
-                                              
-                                        </a>
-                                </div>
-                                <div class="as_user">
-                                    <a href="login.html">
-                                        <img src="assets/images/profile.jpg" alt="">
-                                        <span class="as_add_user">+</span>
-                                    </a>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -82,7 +45,7 @@
                     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                         <div class="as_logo">
                             <a href="index.html">
-                                <img src="assets/images/logo.svg" alt="">
+                                <!--<img src="assets/images/logo.svg" alt="">-->
                             </a>
                         </div>
                     </div>
@@ -94,30 +57,21 @@
                                 </span>
                                 <div class="as_menu">
                                     <ul>
-                                        <li><a href="index.html" class="active">home</a></li>
-                                        <li><a href="about.html">about us</a></li>
-                                        <li><a href="javascript:;">pages</a>
+                                        <li><a href="index.html" class="active">Trang chủ</a></li>
+                                        <li><a href="about.html">Sứ mệnh</a></li>
+                                        <li><a href="javascript:;">Xem vận</a>
                                             <ul class="as_submenu">
-                                                <li><a href="service.html">service</a></li>
-                                                <li><a href="service_single.html">service single</a></li>
-                                                <li><a href="appointments.html">appointment</a></li>
-                                                <li><a href="pricing.html">pricing plans</a></li>
-                                                <li><a href="error.html">404</a></li>
+                                                <li><a href="service.html">Lá số tử vi</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="javascript:;">shop</a>
+                                        <li><a href="javascript:;">Cửa hàng</a>
                                             <ul class="as_submenu">
-                                                <li><a href="shop.html">Shop</a></li>
-                                                <li><a href="shop_single.html">Shop Single</a></li>
+                                                <li><a href="shop.html">Dịch vụ</a></li>
+                                                <li><a href="shop_single.html">Merch</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="javascript:;">blog</a>
-                                            <ul class="as_submenu">
-                                                <li><a href="blog.html">blog</a></li>
-                                                <li><a href="blog_single.html">blog single</a></li>
-                                            </ul>
+                                        <li><a href="javascript:;">Bài viết</a>
                                         </li>
-                                        <li><a href="contact.html">contact</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -135,7 +89,7 @@
                                                     <img src="assets/images/p1.jpg" class="img-responsive">
                                                 </div>
                                                 <div class="as_cart_info">
-                                                    <a href="#">Yellow Sapphire</a>
+                                                    <a href="#">Bùa hộ mạng</a>
                                                     <p>1 X $20.00</p>
                                                     <a href="javascript:;" class="as_cart_remove"><i class="fa fa-trash"></i></a>
                                                 </div>
@@ -145,7 +99,7 @@
                                                     <img src="assets/images/p2.jpg" class="img-responsive">
                                                 </div>
                                                 <div class="as_cart_info">
-                                                    <a href="#">yantra</a>
+                                                    <a href="#">Luận giải lá số tử vi</a>
                                                     <p>1 X $10.00</p>
                                                     <a href="javascript:;" class="as_cart_remove"><i class="fa fa-trash"></i></a>
                                                 </div>
@@ -153,11 +107,11 @@
                                         </ul>
                                     </div>
                                     <div class="as_cart_total">
-                                        <p>total<span>$30.00</span></p>
+                                        <p>Tổng<span>$30.00</span></p>
                                     </div>
                                     <div class="as_cart_btn">
-                                        <button type="button" class="as_btn">view cart</button>
-                                        <button type="button" class="as_btn">checkout</button>
+                                        <button type="button" class="as_btn">Giỏ hàng</button>
+                                        <button type="button" class="as_btn">Thanh toán</button>
                                     </div>
                                 </div>
                             </div>
@@ -193,7 +147,7 @@
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="as_banner_img text-center">
-                            <img src="assets/images/hand_bg.png" alt="" class="img-responsive as_hand_bg">
+                            <img src="assets/images/bat-quai.png" alt="" class="img-responsive as_hand_bg">
                             <img src="assets/images/hand.png" alt="" class="img-responsive as_hand">
                         </div>
                     </div>
@@ -214,7 +168,7 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="as_aboutimg text-right">
                             <img src="assets/images/about.jpg" alt="" class="img-responsive">
-                            <span class="as_play"><img src="assets/images/play.png" alt=""></span>
+                            <span class="as_play"><!--<img src="assets/images/play.png" alt="">--></span>
                         </div> 
                     </div>
                     <div class="col-lg-6 col-md-6">

@@ -396,7 +396,7 @@ a,a:hover,a:focus,a:visited{
 }
 .as_info_detail {
     border-bottom: 1px solid rgb(255 255 255 / 10%);
-    padding: 20px 0;
+    padding: 5px 0;
 }
 .as_search_wrapper {
     max-width: 415px;
@@ -732,6 +732,7 @@ a,a:hover,a:focus,a:visited{
     -webkit-animation: spin 12s infinite linear;
     -moz-animation: spin 12s infinite linear;
     display: inline-block;
+    opacity: 0.3;
 }
 .as_banner_img .as_hand{
     position: absolute;
@@ -3503,7 +3504,7 @@ form.d_block {
     .as_info_detail {
         justify-content: center;
         flex-direction: column;
-        padding: 10px;
+	display: none;
     }
     .as_right_info {
         padding-left: 5px;

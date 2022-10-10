@@ -268,9 +268,17 @@ $(document).ready(function(){
     $(this).closest('.quantity').find('input').val(num);
   }) 
 
-  
-
-  
+  var quotes = new Array(
+    "Vô Cực sinh Thái Cực",
+    "Thái Cực sinh Lưỡng Nghi",
+    "Lưỡng Nghi sinh Tứ tượng",
+    "Tứ Tượng sinh Bát Quái",
+    "Bát Quái sinh vô lượng"
+  );
+  const rndInt = Math.floor(Math.random() * 6) + 1;
+  $(function() {
+    $("#random_quote").text(quotes[rndInt]);
+  });  
   
 })
 $(window).on('load',function(){
