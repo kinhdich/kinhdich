@@ -3468,10 +3468,9 @@ form.d_block {
         display: block;
     }
     .as_menu {
-        position: fixed;
-        left: -200px;
-        top: 0;
-        bottom: 0;
+        position: absolute;
+        margin-left: -162px;
+        top: 50px;
         background-color: var(--dark-color1);
         z-index:999;
         width: 200px;
@@ -3494,6 +3493,7 @@ form.d_block {
     }
     .as_menu_wrapper {
         padding:12px 10px;
+	position: relative;
     }
     .as_cart_wrapper{
         display: flex;
@@ -3575,6 +3575,7 @@ form.d_block {
     }
     .as_banner_slider .slick-arrow.slick-next {
         left: 50px;
+	width: 40px;
     }
     .as_service_single >ul {
         padding: 0 0px 0 18px;
