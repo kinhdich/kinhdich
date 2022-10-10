@@ -3504,7 +3504,6 @@ form.d_block {
     .as_info_detail {
         justify-content: center;
         flex-direction: column;
-	display: none;
     }
     .as_right_info {
         padding-left: 5px;
