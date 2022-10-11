@@ -140,6 +140,7 @@ a,a:hover,a:focus,a:visited{
     font-size: 22px;
     text-transform: capitalize;
     color: var(--dark-color1);
+    text-align: left;
 }
 .as_orange{
     color: var(--secondary-color);
@@ -1594,18 +1595,26 @@ section.as_pricing_plan .row {
     margin: 0;
     padding: 0;
     list-style: none;
+    display: flex;
+    align-items: flex-end;
 }
 
 .as_sign_form ul li {
-    display: inline-flex;
-    width: 23%;
-    margin-left: 15px;
-}
-.as_sign_form ul li:last-child {
-    width: 21%;
+    max-width: 270px;
+    width: 100%;
+    padding: 0 15px;
 }
 .as_sign_form ul li .as_input_feild {
     width: 100%;
+}
+.as_input_feild {
+position: relative;
+}
+.as_input_feild>span {
+position: absolute;
+top: 50%;
+right: 20px;
+transform: translateY(-50%);
 }
 .as_newsletter_wrapper{
     margin: -5px 0 15px;
@@ -3060,8 +3069,12 @@ form.d_block {
     padding: 25px 33px 50px;
     border-radius: 30px;
     position: relative;
-    z-index: 9999;
     overflow: hidden;
+    -webkit-transform: translateZ(0);
+    -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
 }
 .as_sign_form:before {
     content: '';
@@ -3072,7 +3085,6 @@ form.d_block {
     width: 235px;
     height: 235px;
     background-image: url(../images/circle1.png);
-    z-index: -1;
     animation: spin 9s infinite linear;
     -webkit-animation: spin 9s infinite linear;
     -moz-animation: spin 9s infinite linear;
@@ -3249,9 +3261,6 @@ form.d_block {
     .as_customer_img {
         width: 75px !important;
         height: 75px;
-    }
-    .as_sign_form ul li {
-        margin-left: 8px;
     }
     .as_know_sign_wrapper>div{
         width: 100%;
@@ -3644,11 +3653,6 @@ form.d_block {
         top: auto;
         padding: 0 10px;
         margin: 10px 0 0 0;
-    }
-    .as_sign_form ul li {
-        width: 100% !important;
-        margin: 0 0 20px;
-        justify-content: center;
     }
     .as_header_wrapper .as_info_detail .row{
         flex-direction: column;

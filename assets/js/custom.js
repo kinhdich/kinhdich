@@ -278,9 +278,14 @@ $(document).ready(function(){
   const rndInt = Math.floor(Math.random() * 6) + 1;
   $(function() {
     $("#random_quote").text(quotes[rndInt]);
-  });  
-  
-})
+  });
+});
 $(window).on('load',function(){
     $('.as_loader').addClass('hide')
-})
+});
+function getQueFromDateMonthYearHour(date, month, year, hour) {
+    // chia ngay thanh 12 canh gio
+    var hour_canh = Math.floor((hour+1)/2);
+    var json_results = {};
+    return json_results;
+}
