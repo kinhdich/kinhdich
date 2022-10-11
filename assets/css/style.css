@@ -3470,7 +3470,9 @@ form.d_block {
     .as_product_description {
         padding: 50px 0 0;
     }
-    
+    .as_banner_wrapper {
+        padding-top: 40px;
+    }
     .prod_detail {
         display: block;
     }
