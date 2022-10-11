@@ -3647,7 +3647,10 @@ form.d_block {
 }
 @media (max-width:600px){
     .as_banner_wrapper {
-        padding-top: 40px;
+        padding-top: 120px;
+    }
+    .form-control {
+	padding: 0 14px;
     }
     .as_comment_section >ul>li .as_comnt_detail .as_btn {
         position: relative;
