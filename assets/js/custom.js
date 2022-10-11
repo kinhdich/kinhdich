@@ -279,6 +279,9 @@ $(document).ready(function(){
   $(function() {
     $("#random_quote").text(quotes[rndInt]);
   });
+
+  $('#QueDateMonthYear').data('datepicker').selectDate(new Date());
+  $('#QueTime').data('datepicker').selectDate(new Date());
 });
 $(window).on('load',function(){
     $('.as_loader').addClass('hide')
