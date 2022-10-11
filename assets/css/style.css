@@ -3598,6 +3598,7 @@ form.d_block {
     .as_banner_slider .slick-arrow.slick-next,
     .as_banner_slider .slick-arrow.slick-prev {
         bottom: -50px;
+	width: 40px;
     }
     .as_banner_slider .slick-arrow.slick-next {
         left: 50px;
