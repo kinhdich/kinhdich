@@ -3470,9 +3470,6 @@ form.d_block {
     .as_product_description {
         padding: 50px 0 0;
     }
-    .as_banner_wrapper {
-        padding-top: 40px;
-    }
     .prod_detail {
         display: block;
     }
@@ -3649,6 +3646,9 @@ form.d_block {
     }
 }
 @media (max-width:600px){
+    .as_banner_wrapper {
+        padding-top: 40px;
+    }
     .as_comment_section >ul>li .as_comnt_detail .as_btn {
         position: relative;
         right: auto;
