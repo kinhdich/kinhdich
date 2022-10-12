@@ -1,3 +1,5 @@
+var jd = 0;
+
 $(document).ready(function(){
     // login slider
     $('.as_login_slider').slick({
@@ -297,19 +299,23 @@ function getQueFromDateMonthYearHour(date, month, year, hour) {
 function datepickerOnSelect(formattedDate, date, inst) {
     var element = $(this)[0];
     if (element.classes == "") { // QueDateMonthyear
-	var sday = date.getDate();
-	var smonth = date.getMonth()+1;
-	var syear = date.getFullYear();
-	var lunarDate = getLunarDate(sday,smonth,syear);
-	var jd = lunarDate.jd;
-	var s = getDayString(lunarDate, sday, smonth, syear);
-	s += " \u00E2m l\u1ECBch<br />";
-	s += getDayName(lunarDate);
-	s += "<br />Gi\u1EDD \u0111\u1EA7u ng\u00E0y: "+getCanHour0(jd)+" "+CHI[0];
-	s += "<br />Ti\u1EBFt: "+TIETKHI[getSunLongitude(jd+1, 7.0)];
-	s += "<br />Gi\u1EDD ho\u00E0ng \u0111\u1EA1o: "+getGioHoangDao(jd);
-	$("#QueDateTimeInfo").html(s);
+      var sday = date.getDate();
+      var smonth = date.getMonth()+1;
+      var syear = date.getFullYear();
+      var lunarDate = getLunarDate(sday,smonth,syear);
+      jd = lunarDate.jd;
+      var headerTxt = getDayString(lunarDate, sday, smonth, syear);
+      headerTxt = headerTxt.replace("-+-", "<img src='assets/images/logo.jpg' />");
+      $("#QueDateTimeInfo-subheader").html(headerTxt);
+      var s = getDayName(lunarDate);
+      s += "<br />Gi\u1EDD \u0111\u1EA7u ng\u00E0y: "+getCanHour0(jd)+" "+CHI[0];
+      s += "<br />Ti\u1EBFt: "+TIETKHI[getSunLongitude(jd+1, 7.0)];
+      s += "<br />Gi\u1EDD ho\u00E0ng \u0111\u1EA1o: "+getGioHoangDao(jd);
+      $("#QueDateTimeInfo").html(s);
     } else { //QueTime
-
+      var shour = parseInt(formattedDate.split(":")[0]);
+      var lunarHour = 1+Math.floor((shour+1)/2);
+      $("#tinhQue").html("Giờ " + CHI[lunarHour-1] + " (" + lunarHour +")");
+      var thuong = lunarDate + lunarHour;
     }
 }

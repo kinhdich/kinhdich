@@ -335,9 +335,9 @@ function getCanChi(lunar) {
 function getDayString(lunar, solarDay, solarMonth, solarYear) {
 	var s;
 	var dayOfWeek = TUAN[(lunar.jd + 1) % 7];
-	s = dayOfWeek + " " + solarDay + "/" + solarMonth + "/" + solarYear;
+	s = dayOfWeek + ", " + solarDay + "/" + solarMonth + "/" + solarYear;
 	s += " -+- ";
-	s = s + "Ng\u00E0y " + lunar.day+" th\341ng "+lunar.month;
+	s += lunar.day+" th\341ng "+lunar.month+" \u00E2m l\u1ECBch";
 	if (lunar.leap == 1) {
 		s = s + " nhu\u1EADn";
 	}
