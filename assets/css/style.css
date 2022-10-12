@@ -3066,7 +3066,7 @@ form.d_block {
     background-image: -moz-linear-gradient( 0deg, rgb(244,170,54) 0%, rgb(243,115,53) 100%);
     background-image: -webkit-linear-gradient( 0deg, rgb(244,170,54) 0%, rgb(243,115,53) 100%);
     background-image: -ms-linear-gradient( 0deg, rgb(244,170,54) 0%, rgb(243,115,53) 100%);
-    padding: 25px 33px 50px;
+    padding: 25px 33px 20px;
     border-radius: 30px;
     position: relative;
     overflow: hidden;
@@ -3088,6 +3088,9 @@ form.d_block {
     animation: spin 9s infinite linear;
     -webkit-animation: spin 9s infinite linear;
     -moz-animation: spin 9s infinite linear;
+}
+.QueTimeAlldayLabel {
+    color: var(--dark-color1);
 }
 
 /* Responsive css */

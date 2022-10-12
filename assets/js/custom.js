@@ -154,7 +154,8 @@ $(document).ready(function(){
     
     // datepicker
     $('.as_datepicker').datepicker({
-        language: 'en'
+        language: 'en',
+	onSelect: datepickerOnSelect
     });
 
     // timepicker
@@ -162,7 +163,8 @@ $(document).ready(function(){
         dateFormat: ' ',
         timepicker: true,
         classes: 'only-timepicker',
-        language: 'en' 
+        language: 'en',
+	onSelect: datepickerOnSelect
     });
 
     // countTo
@@ -291,4 +293,23 @@ function getQueFromDateMonthYearHour(date, month, year, hour) {
     var hour_canh = Math.floor((hour+1)/2);
     var json_results = {};
     return json_results;
+}
+function datepickerOnSelect(formattedDate, date, inst) {
+    var element = $(this)[0];
+    if (element.classes == "") { // QueDateMonthyear
+	var sday = date.getDate();
+	var smonth = date.getMonth()+1;
+	var syear = date.getFullYear();
+	var lunarDate = getLunarDate(sday,smonth,syear);
+	var jd = lunarDate.jd;
+	var s = getDayString(lunarDate, sday, smonth, syear);
+	s += " \u00E2m l\u1ECBch<br />";
+	s += getDayName(lunarDate);
+	s += "<br />Gi\u1EDD \u0111\u1EA7u ng\u00E0y: "+getCanHour0(jd)+" "+CHI[0];
+	s += "<br />Ti\u1EBFt: "+TIETKHI[getSunLongitude(jd+1, 7.0)];
+	s += "<br />Gi\u1EDD ho\u00E0ng \u0111\u1EA1o: "+getGioHoangDao(jd);
+	$("#QueDateTimeInfo").html(s);
+    } else { //QueTime
+
+    }
 }
