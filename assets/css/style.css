@@ -3092,7 +3092,15 @@ form.d_block {
 .QueTimeAlldayLabel {
     color: var(--dark-color1);
 }
-
+.QueDateTimeInfo-wrapper {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 30px;
+    text-align: left;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
 /* Responsive css */
 @media (min-width: 1200px){
     .container {
