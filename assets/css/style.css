@@ -3106,6 +3106,10 @@ form.d_block {
     margin-top: -5px;
     padding: 0 10px;
 }
+.img-cau-truc-kinh-dich {
+    width: 100%;
+    max-width: 600px;
+}
 /* Responsive css */
 @media (min-width: 1200px){
     .container {

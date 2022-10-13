@@ -1,4 +1,13 @@
-var jd = 0;
+var stoday = new Date();
+var sday = stoday.getDate();
+var smonth = stoday.getMonth()+1;
+var syear = stoday.getFullYear();
+var lunarDate = getLunarDate(sday,smonth,syear);
+var jd = lunarDate.jd;
+var shour = stoday.getHours;
+var lunarHour = (1+Math.floor((shour+1)/2))%12;
+
+var CUNG = new Array("Càn","Đoài","Ly","Chấn","Tốn","Khảm","Cấn","Khôn");
 
 $(document).ready(function(){
     // login slider
@@ -282,6 +291,7 @@ $(document).ready(function(){
   const rndInt = Math.floor(Math.random() * 6) + 1;
   $(function() {
     $("#random_quote").text(quotes[rndInt]);
+    showGuideCANCHI();
   });
 
   $('#QueDateMonthYear').data('datepicker').selectDate(new Date());
@@ -299,10 +309,10 @@ function getQueFromDateMonthYearHour(date, month, year, hour) {
 function datepickerOnSelect(formattedDate, date, inst) {
     var element = $(this)[0];
     if (element.classes == "") { // QueDateMonthyear
-      var sday = date.getDate();
-      var smonth = date.getMonth()+1;
-      var syear = date.getFullYear();
-      var lunarDate = getLunarDate(sday,smonth,syear);
+      sday = date.getDate();
+      smonth = date.getMonth()+1;
+      syear = date.getFullYear();
+      lunarDate = getLunarDate(sday,smonth,syear);
       jd = lunarDate.jd;
       var dateALTxt = getDayStringAL(lunarDate);
       $("#QueDateMonthYearAL").text(dateALTxt);
@@ -313,9 +323,26 @@ function datepickerOnSelect(formattedDate, date, inst) {
       s += "<br />Gi\u1EDD ho\u00E0ng \u0111\u1EA1o: "+getGioHoangDao(jd);
       $("#QueDateTimeInfo").html(s);
     } else { //QueTime
-      var shour = parseInt(formattedDate.split(":")[0]);
-      var lunarHour = 1+Math.floor((shour+1)/2);
+      shour = parseInt(formattedDate.split(":")[0]);
+      lunarHour = (1+Math.floor((shour+1)/2))%12;
       $("#QueTimeAL").html("Giờ " + CHI[lunarHour-1] + " (Chi: " + lunarHour +")");
-      var thuong = lunarDate + lunarHour;
     }
+    var yearChi = (lunarDate.year+8) % 12+1;
+    var thuong = lunarDate.day + lunarDate.month + yearChi;
+    var ha = lunarDate.day + lunarDate.month + yearChi + lunarHour;
+    $("#tinhQueThuong").text(lunarDate.day + " (ngày) +" + lunarDate.month + " (tháng) + " + yearChi + " (năm " + CHI[yearChi-1] + ") = " + thuong + " chia 8 dư " + (thuong%8) + " (cung " + CUNG[(thuong-1)%8] + ")");
+    $("#tinhQueHa").text(lunarDate.day + " (ngày) +" + lunarDate.month + " (tháng) + " + yearChi + " (năm " + CHI[yearChi-1] + ") + " +  lunarHour + " (giờ " + CHI[lunarHour-1] + ") = " + ha + " chia 8 dư " + (ha%8) + " (cung " + CUNG[(ha-1)%8] + ")");
+    $("#tinhHaoDong").text(ha + " (Quẻ Hạ) chia 6 dư " + (ha%6));
+}
+function showGuideCANCHI() {
+  var CANGuideTxt = "10 Can: ";
+  for (var i = 0; i < CAN.length; i++) {
+    CANGuideTxt += "(" + (i+1) + ") " + CAN[i] + ", ";
+  }
+  $("#guide-CAN").text(CANGuideTxt);
+  var CHIGuideTxt = "12 Chi: ";
+  for (var i = 0; i < CHI.length; i++) {
+    CHIGuideTxt += "(" + (i+1) + ") " + CHI[i] + ", ";
+  }
+  $("#guide-CHI").text(CHIGuideTxt);
 }
