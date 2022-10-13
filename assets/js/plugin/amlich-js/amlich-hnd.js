@@ -344,6 +344,16 @@ function getDayString(lunar, solarDay, solarMonth, solarYear) {
 	return s;
 }
 
+function getDayStringAL(lunar) {
+	var s;
+	s = lunar.day+" th\341ng "+lunar.month+" n\u0103m "+lunar.year;
+	if (lunar.leap == 1) {
+		s = s + " nhu\u1EADn";
+	}
+	s += " \u00E2m l\u1ECBch";
+	return s;
+}
+
 function getTodayString() {
 	var s = getDayString(currentLunarDate, today.getDate(), today.getMonth()+1, today.getFullYear());
 	s += " n\u0103m " + getYearCanChi(currentLunarDate.year);
