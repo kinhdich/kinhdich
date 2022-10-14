@@ -8,6 +8,7 @@ var shour = stoday.getHours;
 var lunarHour = (1+Math.floor((shour+1)/2))%12;
 
 var CUNG = new Array("Càn","Đoài","Ly","Chấn","Tốn","Khảm","Cấn","Khôn");
+var ELEMENTS = new Array("Thiên","Trạch","Hỏa","Lôi","Phong","Thủy","Sơn","Địa");
 
 $(document).ready(function(){
     // login slider
@@ -331,8 +332,11 @@ function datepickerOnSelect(formattedDate, date, inst) {
     var thuong = lunarDate.day + lunarDate.month + yearChi;
     var ha = lunarDate.day + lunarDate.month + yearChi + lunarHour;
     $("#tinhQueThuong").text(lunarDate.day + " (ngày) +" + lunarDate.month + " (tháng) + " + yearChi + " (năm " + CHI[yearChi-1] + ") = " + thuong + " chia 8 dư " + (thuong%8) + " (cung " + CUNG[(thuong-1)%8] + ")");
+    $("#queChinhThuong").html("("+thuong%8+")" + " <div class='crop'><img src='assets/images/kinh-dich-la-gi-2.jpg' style='margin: -277px 0 0 -"+((thuong-1)%8*57)+"px;' /></div>");
     $("#tinhQueHa").text(lunarDate.day + " (ngày) +" + lunarDate.month + " (tháng) + " + yearChi + " (năm " + CHI[yearChi-1] + ") + " +  lunarHour + " (giờ " + CHI[lunarHour-1] + ") = " + ha + " chia 8 dư " + (ha%8) + " (cung " + CUNG[(ha-1)%8] + ")");
+    $("#queChinhHa").html("("+ha%8+")" + " <div class='crop'><img src='assets/images/kinh-dich-la-gi-2.jpg' style='margin: -277px 0 0 -"+((ha-1)%8*57)+"px;' /></div>");
     $("#tinhHaoDong").text(ha + " (Quẻ Hạ) chia 6 dư " + (ha%6));
+    $("#queChinhTen").text(getTenQue(thuong,ha));
 }
 function showGuideCANCHI() {
   var CANGuideTxt = "10 Can: ";
@@ -345,4 +349,7 @@ function showGuideCANCHI() {
     CHIGuideTxt += "(" + (i+1) + ") " + CHI[i] + ", ";
   }
   $("#guide-CHI").text(CHIGuideTxt);
+}
+function getTenQue(thuong,ha) {
+  return ELEMENTS[(thuong-1)%8]+" "+ELEMENTS[(ha-1)%8];
 }

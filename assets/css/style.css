@@ -3110,6 +3110,17 @@ form.d_block {
     width: 100%;
     max-width: 600px;
 }
+table.xacDinhQue .crop {
+    width: 60px;
+    height: 50px;
+    overflow: hidden;
+    float: left;
+}
+table.xacDinhQue .crop img {
+    width: 512px;
+    max-width: 512px;
+    height: 404px;
+}
 /* Responsive css */
 @media (min-width: 1200px){
     .container {
